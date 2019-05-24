@@ -1,0 +1,32 @@
+---
+# defaults file for go-dep
+go_dep_ver: v0.5.3
+go_dep_platform: linux-amd64
+go_dep_mirror: https://github.com/golang/dep/releases/download
+
+go_dep_checksums:
+  v0.5.3:
+    # https://github.com/golang/dep/releases/download/v0.5.3/dep-darwin-386.sha256
+    darwin-386: sha256:1572d7d4c88e40ed5ad061b9ee83b64ab73a480a27646251913acfed9cbaaa60
+    # https://github.com/golang/dep/releases/download/v0.5.3/dep-darwin-amd64.sha256
+    darwin-amd64: sha256:d49748b5b67d91f93d457c5005a8f06e00572a49f302305a913b8008de8e44be
+    # https://github.com/golang/dep/releases/download/v0.5.3/dep-freebsd-386.sha256
+    freebsd-386: sha256:5c4eacb4470f2cd041643fccb10149f3d767abcad5d76e9a6850220688dfb5fd
+    # https://github.com/golang/dep/releases/download/v0.5.3/dep-freebsd-amd64.sha256
+    freebsd-amd64: sha256:6a88716c13d7b213c516647e402694cef38cf6a6d6091802f595ff2fff91624f
+    # https://github.com/golang/dep/releases/download/v0.5.3/dep-linux-386.sha256
+    linux-386: sha256:705e0046f6c77da71a578dd459a49ddf3248b4b6a605fc734a7a90edbf6a006c
+    # https://github.com/golang/dep/releases/download/v0.5.3/dep-linux-amd64.sha256
+    linux-amd64: sha256:ed8a964af316f592e7fa4787ad873d318b4b98febfd519b966a5195fa85157b8
+    # https://github.com/golang/dep/releases/download/v0.5.3/dep-linux-arm64.sha256
+    linux-arm64: sha256:7eb677d55cebbe9d00099e2b007d369bfcfc2473e23228c0889fd0e7d1fb2a84
+    # https://github.com/golang/dep/releases/download/v0.5.3/dep-linux-ppc64.sha256
+    linux-ppc64: sha256:429c24a20b946aa2588aed5829535f832d828fc545b456237976a4c5e96bf875
+    # https://github.com/golang/dep/releases/download/v0.5.3/dep-linux-ppc64le.sha256
+    linux-ppc64le: sha256:9458a32aefebc61cd99dc813c7bed13a3903257f9ef9a4b4527199af53232a2c
+    # https://github.com/golang/dep/releases/download/v0.5.3/dep-windows-386.exe.sha256
+    windows-386: sha256:3a7b962ffd06706e986d462c276cf170603d9e90d10f8b85a6cfa9256e47fa9b
+    # https://github.com/golang/dep/releases/download/v0.5.3/dep-windows-amd64.exe.sha256
+    windows-amd64: sha256:0c2cc37243b42853090096a7692b1c93eea7c4e646a98891cffa77bd13617fe2
+
+go_dep_gopath: /usr/local/go
