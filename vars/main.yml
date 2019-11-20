@@ -1,5 +1,6 @@
 ---
 # vars file for go-dep
+go_dep_platform: '{{ go_dep_os }}-{{ go_dep_arch }}'
 go_dep_install_directory: '{{ go_dep_gopath }}/bin'
 
 go_dep_checksum: '{{ go_dep_checksums[go_dep_ver][go_dep_platform] }}'

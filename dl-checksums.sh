@@ -1,29 +1,33 @@
 #!/usr/bin/env sh
-VER=v0.5.3
 DIR=~/Downloads
-MIRROR=https://github.com/golang/dep/releases/download/$VER
-
+MIRROR=https://github.com/golang/dep/releases/download
 
 dl()
 {
-    OS=$1
-    PLATFORM=$2
-    SUFFIX=${3:-""}
-    URL=$MIRROR/dep-${OS}-${PLATFORM}${SUFFIX}.sha256
-    printf "# $URL\n"
-    printf "$OS-$PLATFORM: sha256:"
-    curl -SsL $URL | awk '{print $1}'
+    local ver=$1
+    local os=$2
+    local arch=$3
+    local suffix=${4:-}
+    local platform="${os}-${arch}"
+    local url=$MIRROR/$ver/dep-${platform}${suffix}.sha256
+    printf "    # %s\n" $url
+    printf "    %s: sha256:%s\n" $platform $(curl -SsL $url | awk '{print $1}')
 }
 
-dl darwin 386
-dl darwin amd64
-dl freebsd 386
-dl freebsd amd64
-dl linux 386
-dl linux amd64
-dl linux arm64
-dl linux ppc64
-dl linux ppc64le
-dl windows 386 .exe
-dl windows amd64 .exe
+dl_ver() {
+    local ver=$1
+    printf "  %s:\n" $ver
+    dl $ver darwin 386
+    dl $ver darwin amd64
+    dl $ver freebsd 386
+    dl $ver freebsd amd64
+    dl $ver linux 386
+    dl $ver linux amd64
+    dl $ver linux arm64
+    dl $ver linux ppc64
+    dl $ver linux ppc64le
+    dl $ver windows 386 .exe
+    dl $ver windows amd64 .exe
+}
 
+dl_ver ${1:-v0.5.4}

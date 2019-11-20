@@ -1,8 +1,11 @@
 ---
 # defaults file for go-dep
-go_dep_ver: v0.5.3
-go_dep_platform: linux-amd64
+go_dep_ver: v0.5.4
+go_dep_os: linux
+go_dep_arch: amd64
 go_dep_mirror: https://github.com/golang/dep/releases/download
+
+go_dep_gopath: /usr/local/go
 
 go_dep_checksums:
   v0.5.3:
@@ -28,5 +31,26 @@ go_dep_checksums:
     windows-386: sha256:3a7b962ffd06706e986d462c276cf170603d9e90d10f8b85a6cfa9256e47fa9b
     # https://github.com/golang/dep/releases/download/v0.5.3/dep-windows-amd64.exe.sha256
     windows-amd64: sha256:0c2cc37243b42853090096a7692b1c93eea7c4e646a98891cffa77bd13617fe2
-
-go_dep_gopath: /usr/local/go
+  v0.5.4:
+    # https://github.com/golang/dep/releases/download/v0.5.4/dep-darwin-386.sha256
+    darwin-386: sha256:d65c9a3b8f2768da39df0bb716f6388093a66fdf422b8677c602349925cf7c66
+    # https://github.com/golang/dep/releases/download/v0.5.4/dep-darwin-amd64.sha256
+    darwin-amd64: sha256:c36cf732053f4b70732a499eecaa0ac38c6f5547a235362c062446ab8764b3c2
+    # https://github.com/golang/dep/releases/download/v0.5.4/dep-freebsd-386.sha256
+    freebsd-386: sha256:a296e22a8ad64b62d085b909c7d9a1875cfcc772de4419d295da778ecccd5c69
+    # https://github.com/golang/dep/releases/download/v0.5.4/dep-freebsd-amd64.sha256
+    freebsd-amd64: sha256:c1a518dc204f2402ae8511e0d8cfd65378a56241d9fa99f55dec3771a115fb38
+    # https://github.com/golang/dep/releases/download/v0.5.4/dep-linux-386.sha256
+    linux-386: sha256:f736a022c4600f3baa71e969360f354c4049dcf1968f3a1249770af20c2ee968
+    # https://github.com/golang/dep/releases/download/v0.5.4/dep-linux-amd64.sha256
+    linux-amd64: sha256:40a78c13753f482208d3f4bea51244ca60a914341050c588dad1f00b1acc116c
+    # https://github.com/golang/dep/releases/download/v0.5.4/dep-linux-arm64.sha256
+    linux-arm64: sha256:9dbf1612044598cbb195933213eb3c4bab5d4ada0ce5b90a91241c4431b1783a
+    # https://github.com/golang/dep/releases/download/v0.5.4/dep-linux-ppc64.sha256
+    linux-ppc64: sha256:4570f7d1eeb7b19769c7a16682b8ab969e92d11f0383df7daf23f7ca15513963
+    # https://github.com/golang/dep/releases/download/v0.5.4/dep-linux-ppc64le.sha256
+    linux-ppc64le: sha256:488c46166ea0d513f38b71c18262832897d3866bad396b05ecfb293ed7bd33f4
+    # https://github.com/golang/dep/releases/download/v0.5.4/dep-windows-386.exe.sha256
+    windows-386: sha256:b4b2157cf6cec9c5ed03e30e9e1c1fce61c3ad9178b16942ea349cbb7dbce4b3
+    # https://github.com/golang/dep/releases/download/v0.5.4/dep-windows-amd64.exe.sha256
+    windows-amd64: sha256:61e542fcf5aeba57129387f3ff1dae006c13a6f09fbe1ffc2e9867a4555cee1d
